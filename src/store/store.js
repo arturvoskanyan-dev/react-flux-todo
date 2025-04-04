@@ -4,9 +4,8 @@ const initState = {
 }
 
 const reducer = (state, action) => {
-    console.log(action);
     switch(action.type) {
-        
+
         case "text":
             return {
                 ...state,
@@ -37,6 +36,18 @@ const reducer = (state, action) => {
                     ? {...todo, completed : !todo.completed}
                     : todo
                 })
+            }
+
+        case "remove":
+            return {
+                ...state,
+                todos: state.todos.filter((todo) => todo.id !== action.payload)
+            }
+
+        case "clearAll":
+            return {
+                ...state,
+                todos: action.payload
             }
         default : 
             return state

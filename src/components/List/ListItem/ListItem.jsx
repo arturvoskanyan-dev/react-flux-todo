@@ -13,7 +13,7 @@ export default function ListItem({ id, text, completed, dispatch}) {
             <span className={`flex-1 ${completed ? "text-gray-500 line-through" : "text-white"} font-bold truncate`}>{text}</span>
             <div className='flex gap-2 text-xl text-white cursor-pointer'>
                 <MdEdit />
-                <FaRegTrashCan onClick={() => remove(id)} />
+                <FaRegTrashCan onClick={() => dispatch({type : "remove", payload : id})} />
             </div>
         </li>
     )
