@@ -22,6 +22,7 @@ const reducer = (state, action) => {
                         {
                             id: Date.now(),
                             text : action.payload,
+                            isEdit : false,
                             completed : false
                         }
                     ]
@@ -34,6 +35,16 @@ const reducer = (state, action) => {
                 todos: state.todos.map((todo) => {
                     return todo.id === action.payload
                     ? {...todo, completed : !todo.completed}
+                    : todo
+                })
+            }
+
+        case "edit":
+            return {
+                ...state,
+                todos: state.todos.map((todo) => {
+                    return todo.id === action.payload.id  
+                    ? {...todo, text : action.payload.newText, isEdit : !action.payload.isEdit}
                     : todo
                 })
             }

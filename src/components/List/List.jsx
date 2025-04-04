@@ -12,6 +12,7 @@ export default function List({ todos, dispatch }) {
                 id={todo.id}
                 key={todo.id}
                 text={todo.text}
+                isEdit={todo.isEdit}
                 dispatch={dispatch}
                 completed={todo.completed}
               />

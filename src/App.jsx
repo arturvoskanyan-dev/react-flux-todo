@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initState)
-
+  
   return (
     <section className="p-5 w-todo bg-dark-brown rounded-md shadow-2xl">
       <Header text={state.text} dispatch={dispatch} />
