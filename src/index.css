@@ -7,5 +7,6 @@
     --color-dark-brown: #15101C;
     --color-light-brown: #2d2636;
     --width-todo: 450px;
+    --height-todo: 450px;
     --shadow-input: 0 0 4px rgba(255, 255, 255, 0.523);
 }
