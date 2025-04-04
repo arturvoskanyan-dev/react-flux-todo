@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D0714;
+}
+
+.list::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #3E1671;
+}
+
+.list::-webkit-scrollbar-thumb {
+    width: 4px;
+    background-color: #8d64c4;
+    border-radius: 10px;
+}
